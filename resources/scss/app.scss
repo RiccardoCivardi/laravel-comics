@@ -1,0 +1,29 @@
+// @import '~bootstrap/scss/bootstrap'
+
+@use 'partials/variables' as *;
+@use 'partials/mixin' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1278px;
+  margin: 0 auto;
+}

@@ -1,0 +1,66 @@
+@use './variables' as *;
+
+@mixin dFlexRow($type: 'center') {
+
+  display: flex;
+
+  @if $type =='alignCenter' {
+    align-items: center;
+  }
+
+  @else if $type =='justifyCenter' {
+    justify-content: center;
+  }
+
+  @else if $type =='between' {
+    justify-content: space-between;
+  }
+
+  @else if $type =='betweenCenter' {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @else if $type =='around' {
+    justify-content: space-around;
+  }
+
+  @else if $type =='aroundCenter' {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @else if $type == 'wrap' {
+    flex-wrap: wrap;
+  }
+
+  @else if $type =='center' {
+    justify-content: center;
+    align-items: center;
+  }
+
+};
+
+@mixin boxRectangleText($type: 'btnSmall') {
+  background-color: $primary-color;
+  color: $text-light;
+
+  @if $type =='title' {
+    text-transform: uppercase;
+    padding: 15px 30px;
+  }
+
+  @else if $type =='btnSmall' {
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $text-light;
+      color: $primary-color;
+    }
+  }
+
+}
