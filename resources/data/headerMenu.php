@@ -2,44 +2,44 @@
 
 $menu = [
     [
-      'text' => 'Characters',
-      'href' => 'characters'
+        'text' => 'Characters',
+        'href' => 'characters'
     ],
     [
-      'text' => 'Comics',
-     ' href' => 'comics'
+        'text' => 'Comics',
+        'href' => 'comics'
     ],
     [
-      'text' => 'Movies',
-      'href' => 'movies'
+        'text' => 'Movies',
+        'href' => 'movies'
     ],
     [
-      'text' => 'Tv',
-      'href' => 'tv'
+        'text' => 'Tv',
+        'href' => 'tv'
     ],
     [
-      'text' => 'Games',
-      'href' => 'games'
+        'text' => 'Games',
+        'href' => 'games'
     ],
     [
-      'text' => 'Collectibles',
-      'href' => 'collectibles'
+        'text' => 'Collectibles',
+        'href' => 'collectibles'
     ],
     [
-      'text' => 'Videos',
-      'href' => 'videos'
+        'text' => 'Videos',
+        'href' => 'videos'
     ],
     [
-      'text' => 'Fans',
-      'href' => 'fans'
+        'text' => 'Fans',
+        'href' => 'fans'
     ],
     [
-      'text' => 'News',
-      'href' => 'news'
+        'text' => 'News',
+        'href' => 'news'
     ],
     [
-      'text' => 'Shop',
-      'href' => 'shop'
+        'text' => 'Shop',
+        'href' => 'shop'
     ]
 ];
 
