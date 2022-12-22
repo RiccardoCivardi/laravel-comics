@@ -21,8 +21,9 @@ Route::get('/characters', function () {
 Route::get('/', function () {
 
     require_once __DIR__ . '/../resources/data/comics.php';
+    require_once __DIR__ . '/../resources/data/icons.php';
 
-    return view('comics', compact('comics'));
+    return view('comics', compact('comics', 'icons'));
 })->name('comics');
 
 Route::get('/movies', function () {

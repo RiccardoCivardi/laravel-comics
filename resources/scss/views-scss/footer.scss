@@ -1,0 +1,97 @@
+footer {
+    height: $footer-height;
+    .footer-top {
+        background-image: url('../img/footer-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        .container {
+            height: 100%;
+            height: calc($footer-height - $social-footer-height);
+            background-image: url('../img/dc-logo-bg.png');
+            background-repeat: no-repeat;
+            background-position: right;
+            .footer-wrapper {
+                padding-top: 40px;
+                .footer-menu {
+                    display: flex;
+                    .col {
+                        margin-right: 30px;
+                        h3 {
+                            color: $text-light;
+                            text-transform: uppercase;
+                        }
+                        ul {
+                            margin: 15px 0;
+                            li {
+                                margin-bottom: 5px;
+                                a {
+                                    text-decoration: none;
+                                    color: lighten($bg-dark, 40%);
+                                    font-size: 0.8rem;
+                                    &:hover {
+                                    color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    color: lighten($bg-dark, 40%);
+                    font-size: 0.8rem;
+                    a {
+                        text-decoration: none;
+                        color: $primary-color;
+                        font-size: 0.8rem;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .social-footer {
+        height: $social-footer-height;
+        background-color: $bg-dark;
+        .container{
+            height: 100%;
+            @include dFlexRow(betweenCenter);
+            .sign-up {
+                border: 2px solid $primary-color;
+                padding: 10px;
+                cursor: pointer;
+                transition: all 1s;
+                a {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    color: $text-light;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+            .social {
+                @include dFlexRow(alignCenter);
+                * {
+                    margin: 0 5px;
+                }
+                span {
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $primary-color;
+                }
+                img:hover {
+                    filter: brightness(2);
+                }
+            }
+        }
+    }
+
+}
