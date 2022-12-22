@@ -19,7 +19,10 @@ Route::get('/characters', function () {
 
 // Questa la tratto come home!
 Route::get('/', function () {
-    return view('comics');
+
+    require_once __DIR__ . '/../resources/data/comics.php';
+
+    return view('comics', compact('comics'));
 })->name('comics');
 
 Route::get('/movies', function () {

@@ -5,3 +5,7 @@
         PROVA CHARACTERS
     </main>
 @endsection
+
+@section('title')
+    | CHARACTERS
+@endsection

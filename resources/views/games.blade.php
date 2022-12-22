@@ -5,3 +5,7 @@
         PROVA GAMES
     </main>
 @endsection
+
+@section('title')
+    | GAMES
+@endsection

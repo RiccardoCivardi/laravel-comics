@@ -5,3 +5,7 @@
         PROVA MOVIES
     </main>
 @endsection
+
+@section('title')
+    | MOVIES
+@endsection

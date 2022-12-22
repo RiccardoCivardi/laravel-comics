@@ -5,3 +5,7 @@
         PROVA FANS
     </main>
 @endsection
+
+@section('title')
+    | FANS
+@endsection

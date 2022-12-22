@@ -5,3 +5,7 @@
         PROVA NEWS
     </main>
 @endsection
+
+@section('title')
+    | NEWS
+@endsection

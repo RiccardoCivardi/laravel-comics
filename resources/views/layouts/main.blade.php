@@ -8,11 +8,13 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
-    <title>Vite DC Comics</title>
+    <title>Vite DC Comics @yield('title')</title>
 </head>
 <body>
 
     @include('partials.header')
+
+    @include('partials.jumbo')
 
     @yield('content')
 

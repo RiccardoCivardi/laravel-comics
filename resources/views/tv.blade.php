@@ -5,3 +5,7 @@
         PROVA TV
     </main>
 @endsection
+
+@section('title')
+    | TV
+@endsection

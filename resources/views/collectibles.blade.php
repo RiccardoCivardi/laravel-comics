@@ -5,3 +5,7 @@
         PROVA COLLECTIBLES
     </main>
 @endsection
+
+@section('title')
+    | COLLECTIBLES
+@endsection
