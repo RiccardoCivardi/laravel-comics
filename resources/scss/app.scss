@@ -5,25 +5,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .container {
-  width: 90%;
-  max-width: 1278px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1278px;
+    margin: 0 auto;
 }
+
+header {
+    height: $header-height;
+    .container {
+        height: 100%;
+        @include dFlexRow(between);
+        * {
+            cursor: pointer;
+        }
+        .logo {
+            width: 90px;
+            @include dFlexRow(alignCenter)
+        }
+        nav, ul, li {
+            height: 100%;
+        }
+        ul {
+            li {
+                line-height: $header-height;
+                display: inline-block;
+                margin: 0 10px;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $secondary-color;
+                }
+                &:hover,
+                &.active {
+                border-bottom: 5px solid $primary-color;
+                }
+                &:hover a,
+                &.active a{
+                color: $primary-color;
+                }
+            }
+        }
+    }
+
+}
+
+footer{
+    height: $footer-height;
+    background-image: url('../assets/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container {
+        height: 100%;
+        height: calc($footer-height - $social-footer-height);
+        background-image: url('../assets/img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        .footer-menu {
+            display: flex;
+            padding: 40px 0;
+            .col {
+                margin-right: 30px;
+                h3 {
+                    color: $text-light;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+
