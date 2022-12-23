@@ -1,0 +1,104 @@
+header {
+    .announcement {
+        background-color: $primary-color;
+        .container {
+            padding: 5px 0;
+            text-align: end;
+            span {
+                text-transform: uppercase;
+                color: $text-light;
+                font-weight: 500;
+                font-size: 0.8rem;
+            }
+            span:last-child {
+                margin-left: 50px;
+            }
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 0px;
+	            height: 0px;
+	            border-left: 4px solid transparent;
+	            border-right: 4px solid transparent;
+	            border-top: 8px solid $text-light;
+            }
+        }
+    }
+
+    .main-header{
+        height: $header-height;
+        .container {
+            height: 100%;
+            @include dFlexRow(between);
+            * {
+                cursor: pointer;
+            }
+            .logo {
+                width: 90px;
+                @include dFlexRow(alignCenter);
+            }
+            .nav-bar {
+                @include dFlexRow(betweenCenter);
+                nav, ul, li {
+                    height: 100%;
+                }
+                ul {
+                    li {
+                        line-height: $header-height;
+                        display: inline-block;
+                        margin: 0 10px;
+                        a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: $secondary-color;
+                        }
+                        &:hover,
+                        &.active {
+                        border-bottom: 5px solid $primary-color;
+                        }
+                        &:hover a,
+                        &.active a{
+                        color: $primary-color;
+                        }
+                    }
+                    li:last-child a::after {
+                        content: '';
+                        display: inline-block;
+                        width: 0px;
+                        height: 0px;
+                        border-left: 3px solid transparent;
+                        border-right: 3px solid transparent;
+                        border-top: 6px solid $primary-color;
+                        margin-left: 10px;
+                        padding-bottom: 3px;
+                    }
+                }
+                .search {
+                    border-bottom: 2px solid $primary-color;
+                    margin-left: 50px;
+                    padding-right: 10px;
+                    input {
+                        width: 150px;
+                        border: none;
+                        padding: 5px 5px;
+                        &:focus {
+                            outline: none;
+                        }
+                        &::placeholder {
+                            font-weight: bold;
+                            color: $secondary-color;
+                            text-align: end;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .search::after {
+                    content: '\f002';
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,10 @@
 @php
 
-    require_once __DIR__ . '../../../../resources/data/headerMenu.php';
+    // Metodo che ho utilizzato prima di imparare config()
+    // require_once __DIR__ . '../../../../resources/data/headerMenu.php';
+
+    // con config()
+    $menu = config('data.headerMenu.menu');
 
 @endphp
 
@@ -9,7 +13,8 @@
     <div class="announcement">
         <div class="container">
             <span>DC POWER&#x2120; VISA&reg;</span>
-
+            <!-- Se dovrà aprirsi un menù a tendina modificherò gli stili -->
+            <span>ADDITIONAL DC SITES</span>
         </div>
     </div>
 
@@ -22,17 +27,25 @@
                 </a>
             </div>
 
-            <nav>
-                <ul>
+            <div class="nav-bar">
 
-                    @foreach ($menu as $link)
-                        <li class="{{Route::currentRouteName() === $link['href'] ? 'active' : ''}}">
-                            <a href="{{route($link['href'])}}">{{$link['text']}}</a>
-                        </li>
-                    @endforeach
+                <nav>
+                    <ul>
 
-                </ul>
-            </nav>
+                        @foreach ($menu as $link)
+                            <li class="{{Route::currentRouteName() === $link['href'] ? 'active' : ''}}">
+                                <a href="{{route($link['href'])}}">{{$link['text']}}</a>
+                            </li>
+                        @endforeach
+
+                    </ul>
+                </nav>
+
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                </div>
+
+            </div>
 
         </div>
     </div>

@@ -1,10 +1,18 @@
 @php
 
-    require_once __DIR__ . '../../../../resources/data/dcComicsMenu.php';
-    require_once __DIR__ . '../../../../resources/data/shopMenu.php';
-    require_once __DIR__ . '../../../../resources/data/dcMenu.php';
-    require_once __DIR__ . '../../../../resources/data/sitesMenu.php';
-    require_once __DIR__ . '../../../../resources/data/socials.php';
+    // Metodo che ho utilizzato prima di imparare config()
+    // require_once __DIR__ . '../../../../resources/data/dcComicsMenu.php';
+    // require_once __DIR__ . '../../../../resources/data/shopMenu.php';
+    // require_once __DIR__ . '../../../../resources/data/dcMenu.php';
+    // require_once __DIR__ . '../../../../resources/data/sitesMenu.php';
+    // require_once __DIR__ . '../../../../resources/data/socials.php';
+
+    // con config()
+    $dcComicsMenu = config('data.dcComicsMenu.dcComicsMenu');
+    $shopMenu = config('data.shopMenu.shopMenu');
+    $dcMenu = config('data.dcMenu.dcMenu');
+    $sitesMenu = config('data.sitesMenu.sitesMenu');
+    $socials = config('data.socials.socials');
 
 @endphp
 

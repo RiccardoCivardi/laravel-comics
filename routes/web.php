@@ -20,8 +20,12 @@ Route::get('/characters', function () {
 // Questa la tratto come home!
 Route::get('/', function () {
 
-    require_once __DIR__ . '/../resources/data/comics.php';
-    require_once __DIR__ . '/../resources/data/icons.php';
+    // Metodo che ho utilizzato prima di imparare config()
+    // require_once __DIR__ . '/../resources/data/comics.php';
+    // require_once __DIR__ . '/../resources/data/icons.php';
+
+    $comics = config('data.comics.comics');
+    $icons = config('data.icons.icons');
 
     return view('comics', compact('comics', 'icons'));
 })->name('comics');
