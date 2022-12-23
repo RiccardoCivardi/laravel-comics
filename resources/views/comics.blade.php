@@ -36,11 +36,15 @@
                     <div class="icon">
 
                         <div class="image">
-                            <img src="{{Vite::asset('resources/img/'.$icon['name'])}}" :alt="{{$icon['text']}} picture">
+                            <a href="{{$icon['href']}}">
+                                <img src="{{Vite::asset('resources/img/'.$icon['name'])}}" :alt="{{$icon['text']}} picture">
+                            </a>
                         </div>
 
                         <div class="text">
-                            <span>{{$icon['text']}}</span>
+                            <a href="{{$icon['href']}}">
+                                <span>{{$icon['text']}}</span>
+                            </a>
                         </div>
 
                     </div>

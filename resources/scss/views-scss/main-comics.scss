@@ -58,9 +58,14 @@
                     }
                 }
                 .text {
-                    text-transform: uppercase;
-                    color: $text-light;
-                    font-size: 1.1rem;
+                    a{
+                        text-decoration: none;
+                    }
+                    span {
+                        text-transform: uppercase;
+                        color: $text-light;
+                        font-size: 1.1rem;
+                    }
                 }
                 .image, .text {
                     cursor: pointer;
