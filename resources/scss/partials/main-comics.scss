@@ -21,6 +21,8 @@
     .card {
         flex-basis: calc(100% / 6);
         padding: 15px 15px 25px;
+        display: block;
+        text-decoration: none;
         .image {
             width: 100%;
             margin-bottom: 15px;
@@ -35,9 +37,6 @@
             font-weight: 400;
             text-transform: uppercase;
             color: $text-light;
-        }
-        img, h4 {
-            cursor: pointer;
         }
     }
     .icons-container {

@@ -30,6 +30,15 @@ Route::get('/', function () {
     return view('comics', compact('comics', 'icons'));
 })->name('comics');
 
+Route::get('/dettaglio-fumetto/{id}', function ($id) {
+
+    $comics = config('data.comics.comics');
+    $comic_get = array_filter($comics, fn ($item) => $item['id'] == $id);
+    $comic = $comic_get[array_key_first($comic_get)];
+
+    return view('comic_detail', compact('comic'));
+})->name('comic_detail');
+
 Route::get('/movies', function () {
     return view('movies');
 })->name('movies');

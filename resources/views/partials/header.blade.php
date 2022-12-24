@@ -33,7 +33,15 @@
                     <ul>
 
                         @foreach ($menu as $link)
-                            <li class="{{Route::currentRouteName() === $link['href'] ? 'active' : ''}}">
+                            @php
+                                $class_active = Route::currentRouteName() === $link['href'] ? 'active' : '';
+
+                                    if(Route::currentRouteName() === 'comic_detail' && $link['href'] === 'comics'){
+                                    $class_active = 'active';
+                                }
+                            @endphp
+
+                            <li class="{{$class_active}}">
                                 <a href="{{route($link['href'])}}">{{$link['text']}}</a>
                             </li>
                         @endforeach

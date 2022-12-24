@@ -9,7 +9,7 @@
             <div class="card-wrapper">
                 @foreach ($comics as $comic)
 
-                    <div class="card">
+                    <a class="card" href="{{ route('comic_detail', ['id' => $comic['id']]) }}">
 
                         <div class="image">
                             <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
@@ -17,7 +17,7 @@
 
                         <h4>{{$comic['series']}}</h4>
 
-                    </div>
+                    </a>
 
                 @endforeach
             </div>
