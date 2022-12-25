@@ -1,0 +1,187 @@
+.main-comic-detail {
+    .colored-strip {
+        background: $primary-color;
+        padding: 40px 0;
+        position: relative;
+        .container-comic {
+            .image{
+                position: absolute;
+                top: -235px;
+                img {
+                    border: 1px solid $text-light;
+                }
+            }
+        }
+    }
+    .container-comic {
+        .detail-top {
+            @include dFlexRow(between);
+            padding: 50px 0 68px 0;
+            .text {
+                flex-basis: 65%;
+
+                h1{
+                    text-transform: uppercase;
+                    color: $accent-color;
+                    font-weight: 500;
+                    font-size: 1.7rem;
+                    padding-top: 18px;
+                    margin-bottom: 25px;
+                }
+                .info {
+                    @include dFlexRow(between);
+                    background-color: $price-color;
+                    color: $text-light;
+                    font-weight: 300;
+                    border-bottom: 1px solid darken($price-color, 20%);
+                    margin-bottom: 15px;
+                    .price {
+                        flex-basis: 70%;
+                        @include dFlexRow(betweenCenter);
+                        border-right: 1px solid darken($price-color, 20%);
+                        padding: 15px 25px;
+                        .price-left span:last-child {
+                            font-weight: 400;
+                        }
+                        .price-right span {
+                            text-transform: uppercase;
+                        }
+                    }
+                    .availability {
+                        flex-basis: 30%;
+                        @include dFlexRow(center);
+                        span {
+                            font-weight: 400;
+                            cursor: pointer;
+                        }
+                        &:after {
+                            content: '';
+                            display: inline-block;
+                            width: 0px;
+                            height: 0px;
+                            border-left: 3px solid transparent;
+                            border-right: 3px solid transparent;
+                            border-top: 6px solid $text-light;
+                            margin-left: 5px;
+                        }
+                    }
+
+                }
+                p {
+                    color: $secondary-color;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .image-adv {
+                flex-basis: 30%;
+                @include dFlexRow(column);
+                text-align: end;
+                span {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $secondary-color;
+                    padding: 3px 0;
+                }
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .detail-bottom {
+        background-color: $bg-light;
+        padding: 25px 0 98px 0;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        .detail {
+            @include dFlexRow(between);
+            .talent, .specs {
+                flex-basis: 48%;
+                h2 {
+                    color: $accent-color;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid lightgray;
+                }
+                .detail-item {
+                    @include dFlexRow(between);
+                    padding: 10px 0;
+                    border-bottom: 1px solid lightgray;
+                    font-size: 0.8rem;
+                    .title-item {
+                        flex-basis: 100%;
+                        color: $accent-color;
+                        font-weight: 500;
+                    }
+                    .info-item {
+                        color: lighten($primary-color, 10%);
+                        flex-basis: 180%;
+                        span {
+                            color: $secondary-color;
+                        }
+                    }
+                    .info-item.uppercase{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .specs > .detail-item:last-child > .info-item,
+            .specs > .detail-item:nth-last-child(2) > .info-item {
+                color: $secondary-color;
+            }
+        }
+    }
+    .call-to-action {
+        background-color: $bg-light;
+        .container-comic {
+            @include dFlexRow('between');
+            border-left: 1px solid lightgrey;
+            border-right: 1px solid lightgrey;
+            .item {
+                padding: 15px;
+                flex-basis: 25%;
+                text-decoration: none;
+                @include dFlexRow(between);
+                span {
+                    text-transform: uppercase;
+                    color: lighten($secondary-color, 20%);
+                    font-weight: 500;
+                    font-size: 0.8rem;
+                }
+                .image {
+                    width: 37px;
+                    height: 37px;
+                    overflow: hidden;
+                    img {
+                        width: 400%;
+                        height: 200%;
+                        object-fit: cover;
+                    }
+                }
+                &:first-child {
+                    border-right: 1px solid lightgrey;
+                    img {
+                        object-position: top left;
+                    }
+                }
+                &:nth-child(2) {
+                    border-right: 1px solid lightgrey;
+                    img {
+                        object-position: top right;
+                    }
+                }
+                &:nth-last-child(2) {
+                    border-right: 1px solid lightgrey;
+                    img {
+                        object-position: 65%;
+                    }
+                }
+                &:last-child img {
+                    object-position: 33%;
+                }
+            }
+        }
+    }
+}

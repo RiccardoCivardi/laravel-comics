@@ -39,6 +39,10 @@
     align-items: center;
   }
 
+  @else if $type == 'column' {
+    flex-direction: column;
+  }
+
 };
 
 @mixin boxRectangleText($type: 'btnSmall') {
